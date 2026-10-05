@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="hapticspp">
+  <schema id="org.gnome.shell.extensions.hapticspp"
+          path="/org/gnome/shell/extensions/hapticspp/">
+
+    <key name="pointer-signatures" type="as">
+      <default>[]</default>
+      <summary>Calibrated cursor signatures that should buzz</summary>
+      <description>
+        Filled in by the calibrate shortcut while hovering a clickable element.
+        Cursor sprites are theme-specific, so these cannot be shipped as defaults.
+      </description>
+    </key>
+
+    <key name="calibrate-pointer" type="as">
+      <default><![CDATA[['<Super><Alt>h']]]></default>
+      <summary>Record the current cursor as a buzzing cursor</summary>
+    </key>
+
+    <key name="forget-signatures" type="as">
+      <default><![CDATA[['<Super><Alt>j']]]></default>
+      <summary>Clear all calibrated cursor signatures</summary>
+    </key>
+
+    <key name="socket-path" type="s">
+      <default>''</default>
+      <summary>Daemon socket path; empty means $XDG_RUNTIME_DIR/hapticspp.sock</summary>
+    </key>
+
+    <key name="waveform" type="i">
+      <default>-1</default>
+      <summary>Waveform id to fire; -1 uses the daemon default</summary>
+    </key>
+
+    <key name="debug" type="b">
+      <default>false</default>
+      <summary>Log every cursor signature to the journal</summary>
+    </key>
+
+  </schema>
+</schemalist>

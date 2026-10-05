@@ -1,0 +1,8 @@
+# Give the logged-in user access to the Logitech receiver's HID++ node, so the
+# haptics daemon does not need to run as root.
+#
+# NixOS: services.udev.extraRules = builtins.readFile ./nix/99-hidpp-haptics.rules;
+# Other distros: copy to /etc/udev/rules.d/ then
+#   sudo udevadm control --reload && sudo udevadm trigger
+
+KERNEL=="hidraw*", ATTRS{idVendor}=="046d", TAG+="uaccess"

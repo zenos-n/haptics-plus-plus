@@ -1,0 +1,8 @@
+{
+  "uuid": "hapticspp@doromiert",
+  "name": "haptics++",
+  "description": "Buzzes the MX Master 4 when the pointer changes to the hand/click cursor.",
+  "shell-version": ["49"],
+  "settings-schema": "org.gnome.shell.extensions.hapticspp",
+  "session-modes": ["user"]
+}
